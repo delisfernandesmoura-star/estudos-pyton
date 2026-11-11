@@ -96,6 +96,8 @@ variations (A/B ads: change hook, color, or layout, one variable at a time).
 | Rules, tokens, systems | design-standards, design-system, design |
 | Landing page / web | frontend-design, funnel-hacking, funnel-select |
 | Slides | slides |
+| Local image editing (crop, composite, color grade, batch) | image-forge (needs `magick`; a shim over ImageMagick 6 exists in this sandbox) |
+| Design critique / polish of a web page or landing page | impeccable (critique, polish, typeset, colorize, layout), design-taste-frontend (anti-generic rules) |
 | Analyse a video or reference | watch |
 
 ## Limits (be honest with the user)
