@@ -1,11 +1,11 @@
-# Livro oficial Brisa — memória do projeto
+# Livro oficial Brízia — memória do projeto
 
-> Leia este arquivo antes de qualquer trabalho no livro da Dra. Brízia Lacerda ("Brisa").
+> Leia este arquivo antes de qualquer trabalho no livro da Dra. Brízia Lacerda.
 
 ## Identidade do livro
 - **Título:** Voz, Canto e Ciência
 - **Subtítulo:** Saúde vocal, técnica vocal e inspiração: fonoaudiologia aplicada à voz cantada e falada
-- **Autora:** Dra. Brízia Lacerda. Use esse nome também no ISBN. "Brisa" é o apelido usado nas conversas.
+- **Autora:** Dra. Brízia Lacerda. Use esse nome também no ISBN.
 - **Sobre a autora:**
   - fonoaudióloga formada pela PUC Minas, pós-graduada e especialista em voz;
   - cantora, vocal coach, pesquisadora, escritora e palestrante, mãe e esposa;
