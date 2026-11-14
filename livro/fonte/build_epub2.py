@@ -3,7 +3,7 @@ d=json.load(open("parts.json"))
 b=d["body"]
 # audio note: plain text
 b=re.sub(r'<p class="audio">.*?<span>(.*?)</span></p>',r'<div class="audio">♪ \1</div>',b,flags=re.S)
-b=b.replace("veja a página 136","veja a página “Áudios dos exercícios”, no final do livro")
+b=re.sub(r"veja a página \d+","veja a página “Áudios dos exercícios”, no final do livro",b)
 # part openers
 def popen(m):
     img=m.group(1); inner=m.group(2)
@@ -22,7 +22,7 @@ b=re.sub(r'<header class="ch-open" id="(cap-\d+)"><div class="ch-n">\d+</div><di
 b=re.sub(r'</?section[^>]*>','',b)
 def p2div(t): return re.sub(r'<p class="([^"]+)">(.*?)</p>',r'<div class="\1">\2</div>',t,flags=re.S)
 b=p2div(b)
-sl=p2div(re.sub(r'</?section[^>]*>','',d["sobre_livro"])).replace('<div class="kick">Apresentação</div>','').replace('<div class="rule"></div>','').replace('<h1>','<h1 class="front">').replace("página 136","página “Áudios dos exercícios”, no final do livro")
+sl=p2div(re.sub(r'</?section[^>]*>','',d["sobre_livro"])).replace('<div class="kick">Apresentação</div>','').replace('<div class="rule"></div>','').replace('<h1>','<h1 class="front">'); sl=re.sub(r"página \d+","página “Áudios dos exercícios”, no final do livro",sl)
 sa=d["sobre_autora"]
 sa_txt=re.search(r'<div class="rule"></div>(.*?)<div class="sig">',sa,re.S).group(1)
 sa='<h1 class="front">Sobre a autora</h1>\n<div class="autora-photo"><img src="assets/bw-autora.jpg" alt="Dra. Brízia Lacerda"/></div>\n'+sa_txt

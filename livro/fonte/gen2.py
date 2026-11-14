@@ -395,7 +395,51 @@ def respiracao():
         b.append(torso(95+i*170,150,m,l,str(m)))
     return svg(w,h,"".join(b))
 
-figs={"f-aparelho":aparelho(),"f-laringe-frente":laringe_frente(),"f-diafragma":diafragma(),"f-postura":postura(),"f-bascula":bascula(),
+
+def metal():
+    w,h=700,250
+    b=[title(350,30,"A escala de metal")]
+    b.append(f'<defs><linearGradient id="gm" x1="0" x2="1"><stop offset="0" stop-color="{GL}"/><stop offset="1" stop-color="{INK}"/></linearGradient></defs>')
+    b.append(f'<rect x="40" y="90" width="620" height="22" rx="11" fill="url(#gm)"/>')
+    items=[("Neutral","não metálica",117),("Curbing","meio metálica",272),("Overdrive","metálica",427),("Edge","muito metálica",582)]
+    for n,d,x in items:
+        b.append(f'<circle cx="{x}" cy="101" r="9" fill="#fff" stroke="{GOLD}" stroke-width="2"/>')
+        b.append(f'<text x="{x}" y="150" text-anchor="middle" style="font-family:Inter;font-size:15px;font-weight:600;fill:{INK}">{n}</text>')
+        b.append(label(x,170,d,anchor="middle",cls="s"))
+    b.append(arrow(260,214,440,214,GOLD,1.8)); b.append(label(350,206,"mais metal",anchor="middle",cls="s"))
+    return svg(w,h,"".join(b))
+
+def cq():
+    w,h=700,250
+    b=[title(350,30,"Quociente de fechamento (CQ)")]
+    x0,x1=150,650
+    def X(p): return x0+(x1-x0)*p/100
+    for p in range(0,101,10):
+        b.append(f'<path d="M {X(p)} 70 L {X(p)} 190" stroke="{GRAY}" stroke-width="{1.2 if p%50==0 else .6}"/>')
+        b.append(label(X(p),210,f"{p}%",anchor="middle",cls="s"))
+    b.append(label(140,108,"Canto lírico",anchor="end")); b.append(f'<rect x="{X(30)}" y="92" width="{X(60)-X(30)}" height="24" rx="12" fill="{GM}"/>')
+    b.append(label(140,158,"Belting",anchor="end")); b.append(f'<rect x="{X(50)}" y="142" width="{X(70)-X(50)}" height="24" rx="12" fill="{GOLD}"/>')
+    b.append(label(350,238,"parte do ciclo glótico em que as pregas vocais permanecem fechadas",anchor="middle",cls="s"))
+    return svg(w,h,"".join(b))
+
+def megafone():
+    w,h=700,300
+    b=[title(350,30,"O megafone e o megafone invertido")]
+    def tube(cx,belt):
+        o=[]
+        L=230; xa=cx-L/2; xb=cx+L/2
+        if belt: hw_a,hw_b=22,70
+        else: hw_a,hw_b=60,26
+        o.append(f'<path d="M {xa} {150-hw_a} C {cx-20} {150-hw_a-(5 if belt else -4)}, {cx+30} {150-hw_b+(10 if belt else -6)}, {xb} {150-hw_b} L {xb} {150+hw_b} C {cx+30} {150+hw_b-(10 if belt else -6)}, {cx-20} {150+hw_a+(5 if belt else -4)}, {xa} {150+hw_a} Z" fill="{GL}" stroke="{INK}" stroke-width="2"/>')
+        o.append(f'<path d="M {xa-14} 136 L {xa} 150 L {xa-14} 164" stroke="{GOLD}" stroke-width="2.4" fill="none"/>')
+        o.append(label(xa-6,196,"laringe",anchor="middle",cls="s")); o.append(label(xb,240,"boca",anchor="middle",cls="s"))
+        o.append(f'<text x="{cx}" y="268" text-anchor="middle" style="font-family:Inter;font-size:14px;font-weight:600;fill:{INK}">{"Belting" if belt else "Canto lírico"}</text>')
+        o.append(label(cx,288,"faringe estreita · boca aberta em sino" if belt else "faringe ampla · boca menor",anchor="middle",cls="s"))
+        return "".join(o)
+    b.append(tube(190,True)); b.append(tube(520,False))
+    return svg(w,h,"".join(b))
+
+figs={"f-metal":metal(),"f-cq":cq(),"f-megafone":megafone(),"f-aparelho":aparelho(),"f-laringe-frente":laringe_frente(),"f-diafragma":diafragma(),"f-postura":postura(),"f-bascula":bascula(),
       "f-ondas":ondas(),"f-fonte-filtro":fonte_filtro(),"f-vibrato":vibrato(),"f-fry":fry(),"f-yodel":yodel(),"f-melisma":melisma(),
       "f-apogiatura":apogiatura(),"f-twang":ressonancia(),"f-registros":registros(),"f-extensao":extensao(),"f-ciclo":ciclo(),
       "f-laringe-corte":laringe_corte(),"f-respiracao":respiracao()}

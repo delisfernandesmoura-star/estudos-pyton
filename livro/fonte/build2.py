@@ -8,8 +8,24 @@ def pg(k): return str(pages.get(k,"")).zfill(2) if pages.get(k) else ""
 AUD=str(pages.get("audios","")) or "final"
 
 old=open("/tmp/work/book/build.py",encoding="utf-8").read()
+ADD='''<li>ELME, M. M.; FERNANDES, A. J. Canto popular e padronização vocal. In: CONGRESSO DA ASSOCIAÇÃO NACIONAL DE PESQUISA E PÓS-GRADUAÇÃO EM MÚSICA (ANPPOM), 24., 2014, São Paulo. <em>Anais</em> [...]. São Paulo: ANPPOM, 2014.</li>
+<li>GARCIA, M. <em>Traité complet de l’art du chant</em>. Paris, 1847.</li>
+<li>LOVETRI, J. 2003. <span class="pend">[dados completos da obra a confirmar]</span></li>
+<li>MARIZ, J. 2013. <span class="pend">[dados completos da obra a confirmar]</span></li>
+<li>POPEIL, L. 2012. <span class="pend">[dados completos da obra a confirmar]</span></li>
+<li>SADOLIN, C. <em>Complete Vocal Technique</em>. Copenhagen: Shout Publishing, 2012.</li>
+<li>SCHUTTE, H. K. 1993. <span class="pend">[dados completos da obra a confirmar]</span></li>
+<li>SPIVEY, N. 2008. <span class="pend">[dados completos da obra a confirmar]</span></li>
+<li>TITZE, I. R.; WORLEY, A. S.; STORY, B. H. Source-vocal tract interaction in female operatic singing and theater belting. <em>Journal of Singing</em>, v. 67, n. 5, p. 561–572, 2011.</li>
+<li>VENEZIANO, N. 2008. <span class="pend">[dados completos da obra a confirmar]</span></li>
+<li>WELLS, 2006. <span class="pend">[dados completos da obra a confirmar]</span></li>
+'''
 REFS=re.search(r"REFS='''(.*?)'''",old,re.S).group(1)
-parts=[open(f"/tmp/work/book/part{i}.html",encoding="utf-8").read() for i in (1,2,3)]
+import html as _h
+items=re.findall(r"<li>.*?</li>",REFS.split("<h3>")[0],re.S)+[x for x in re.findall(r"<li>.*?</li>",ADD,re.S)]
+items=sorted(set(items),key=lambda x: re.sub(r"<[^>]+>","",x).upper())
+REFS=re.sub(r"<ul>.*?</ul>","<ul>\n"+"\n".join(items)+"\n</ul>",REFS,count=1,flags=re.S)
+parts=[open(f"/tmp/work/book/part{i}.html",encoding="utf-8").read() for i in (1,2,3,4)]
 body="\n".join(parts)
 
 # ---- citations ----
@@ -17,6 +33,7 @@ body=re.sub(r'(?<![>\w])\(((?:[A-ZÀ-Ý][A-ZÀ-Ý .;&\'\-]*)(?: ET AL\.)?, \d{4}
 # ---- figure renames ----
 for a,b in [("fig-registros","f-registros"),("fig-extensao-vozes","f-extensao"),("fig-laringe","f-laringe-corte"),("fig-ciclo-glotico","f-ciclo"),("fig-respiracao","f-respiracao")]:
     body=body.replace(f"img/{a}.svg",f"img/{b}.png")
+body=re.sub(r'img/(f-[a-z-]+)\.svg',r'img/\1.png',body)
 def fig(name,cap,cls=""):
     return f'<figure class="fig {cls}"><img src="img/{name}.png" alt=""><figcaption>{cap}</figcaption></figure>\n'
 def ins_before(anchor,html):
@@ -57,8 +74,8 @@ body=re.sub(r'<h2 class="chapter" id="(cap-\d+)"><span class="chapter-num">Capí
 body=re.sub(r'<h2 class="chapter" id="(cap-\d+)"><span class="chapter-num">Capítulo (\d+)</span>(.*?)</h2>',chap,body)
 
 # ---- part openers ----
-PH={"parte-1":("bw-p1.jpg","50% 22%"),"parte-2":("bw-p2.jpg","50% 30%"),"parte-3":("bw-p3.jpg","50% 25%")}
-NUM={"parte-1":"I","parte-2":"II","parte-3":"III"}
+PH={"parte-1":("bw-p1.jpg","50% 22%"),"parte-2":("bw-p2.jpg","50% 30%"),"parte-3":("bw-p3.jpg","50% 25%"),"parte-4":("bw-p4.jpg","50% 20%")}
+NUM={"parte-1":"I","parte-2":"II","parte-3":"III","parte-4":"IV"}
 def popen(m):
     sid=m.group(1); inner=m.group(2)
     lab=re.search(r'<p class="part-label">(.*?)</p>',inner).group(1)
@@ -83,7 +100,9 @@ QUOTES=[("cap-2","Nenhum exercício de canto deve ser desconfortável.","Capítu
         ("cap-9","Aprender a cantar é, inicialmente, aprender a respirar.","Capítulo 9 · Respiração e apoio",None,False),
         ("cap-10","A voz só existe a partir do momento em que a expiração pulmonar fornece uma pressão suficiente para fazer nascer e manter o som laríngeo.","Capítulo 9 · Respiração e apoio",None,True),
         ("cap-11","É preciso ter sempre a impressão de que se pode fazer mais.","Capítulo 9 · Respiração e apoio","bw-q3.jpg",False),
-        ("cap-15","O vibrato oferece à voz uma riqueza expressiva, com grande poder emocional.","Capítulo 15 · Vibrato",None,False)]
+        ("cap-15","O vibrato oferece à voz uma riqueza expressiva, com grande poder emocional.","Capítulo 15 · Vibrato",None,False),
+        ("cap-20","Cada pessoa é única e atingirá cores de som e efeitos únicos.","Capítulo 20 · Cores do som e efeitos",None,False),
+        ("cap-21","A voz serve ao texto.","Capítulo 21 · Belting",None,False)]
 for cid,t,s,ph,lg in QUOTES:
     a=f'<header class="ch-open" id="{cid}">'
     assert a in body, cid
@@ -126,7 +145,7 @@ SOBRE_LIVRO=f'''<section class="fsec" id="sobre-livro"><div class="kick">Apresen
 <div><b>Fonoaudiólogos</b><span>Avaliação do cantor, fatores de risco, hábitos inadequados e a base fisiológica da fonação.</span></div>
 </div>
 <h3>Como o livro está organizado</h3>
-<p><strong>Parte I · Saúde Vocal</strong> trata da avaliação, do aquecimento e desaquecimento, da postura, da higiene vocal e dos fatores que protegem ou ameaçam a voz. <strong>Parte II · Fundamentos do Canto</strong> apresenta a terminologia, a classificação vocal, os estilos de canto, a respiração e a fisiologia da fonação. <strong>Parte III · Ornamentos Vocais</strong> explora fry, twang, yodel, vibrato, melismas, cry e apogiatura.</p>
+<p><strong>Parte I · Saúde Vocal</strong> trata da avaliação, do aquecimento e desaquecimento, da postura, da higiene vocal e dos fatores que protegem ou ameaçam a voz. <strong>Parte II · Fundamentos do Canto</strong> apresenta a terminologia, a classificação vocal, os estilos de canto, a respiração e a fisiologia da fonação. <strong>Parte III · Ornamentos Vocais</strong> explora fry, twang, yodel, vibrato, melismas, cry e apogiatura. <strong>Parte IV · Técnicas Avançadas</strong> apresenta as funções vocais, as cores do som, os efeitos e o belting.</p>
 <p>Os exercícios trazem o símbolo de um fone de ouvido: todos têm áudio de apoio, que você pode baixar pelo QR code e pelo site indicados na página {AUD}.</p>
 <div class="box aviso"><p class="box-title">Aviso</p><p>Este livro tem finalidade educativa e não substitui a avaliação de um médico, de um fonoaudiólogo ou de um professor de canto. Sintomas como rouquidão persistente, dor ou perda da voz exigem avaliação profissional.</p></div>
 </section>'''

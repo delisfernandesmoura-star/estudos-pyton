@@ -67,16 +67,16 @@ h4{font-family:Inter;font-weight:600;font-size:7.6pt;letter-spacing:.26em;text-t
 
 /* TOC */
 .toc{page:front;break-before:page;break-after:page}
-.toc h1{font-family:Bodoni;font-weight:400;font-size:34pt;margin:0 0 4mm;line-height:1}
-.toc .row{display:flex;align-items:baseline;gap:4mm;padding:.35mm 0;font-size:8.1pt;line-height:1.5;border-bottom:.5px solid #d6cdbd}
+.toc h1{font-family:Bodoni;font-weight:400;font-size:30pt;margin:0 0 2.5mm;line-height:1}
+.toc .row{display:flex;align-items:baseline;gap:4mm;padding:.15mm 0;font-size:7.8pt;line-height:1.45;border-bottom:.5px solid #d6cdbd}
 .toc .row .n{font-family:Bodoni;color:var(--ouro);width:9mm;font-size:10pt}
 .toc .row .t{flex:1}
 .toc .row .p{font-family:Bodoni;font-size:10pt;color:#5d574e}
-.toc .part{margin:3.2mm 0 .6mm;display:flex;align-items:baseline;gap:4mm}
+.toc .part{margin:2.6mm 0 .4mm;display:flex;align-items:baseline;gap:4mm}
 .toc .part .k{font-size:6.4pt;letter-spacing:.34em;text-transform:uppercase;color:var(--ouro);font-weight:600;width:22mm}
-.toc .part .t{font-family:Bodoni;font-size:13pt;flex:1}
+.toc .part .t{font-family:Bodoni;font-size:12pt;flex:1}
 .toc .part .p{font-family:Bodoni;font-size:10pt;color:#5d574e}
-.toc .fm{display:flex;justify-content:space-between;font-size:8.4pt;padding:.7mm 0;font-weight:600}
+.toc .fm{display:flex;justify-content:space-between;font-size:8pt;padding:.4mm 0;font-weight:600}
 .toc .fm .p{font-family:Bodoni;font-weight:400;color:#5d574e}
 
 /* generic front sections */
