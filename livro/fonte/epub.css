@@ -1,0 +1,66 @@
+@font-face{font-family:"Lora";font-weight:700;font-style:normal;src:url("../fonts/lora-latin-700-normal.woff")}
+@font-face{font-family:"Lora";font-weight:600;font-style:normal;src:url("../fonts/lora-latin-600-normal.woff")}
+@font-face{font-family:"Lora";font-weight:400;font-style:italic;src:url("../fonts/lora-latin-400-italic.woff")}
+body{margin:5%;line-height:1.55;color:#1b2230}
+h1,h2,h3,h4{font-family:"Lora",Georgia,serif;color:#142033;line-height:1.2;page-break-after:avoid}
+h1{font-size:1.8em;font-weight:700;margin:1.2em 0 .6em}
+h1.front{border-top:2px solid #C8AD80;padding-top:.5em}
+h2{font-size:1.5em;font-weight:700;margin:1.4em 0 .8em;border-top:2px solid #C8AD80;padding-top:.5em}
+h2.p2{color:#430F1C} h2.p3{color:#0a0a0a}
+h3{font-size:1.2em;font-weight:600;margin:1.4em 0 .5em}
+h4{font-size:1em;font-weight:700;margin:1.1em 0 .4em;font-family:sans-serif}
+.chapter-num{display:block;font-family:sans-serif;font-size:.6em;font-weight:600;letter-spacing:.3em;text-transform:uppercase;color:#a58b5c;margin-bottom:.5em}
+p{margin:0 0 .8em}
+.cit{font-size:.8em;color:#8a7a56}
+.box{margin:1.2em 0;padding:.8em 1em .4em;border-left:4px solid #142033;background:#f5f1e6;border-radius:3px;font-size:.95em}
+.box p{margin:0 0 .6em}
+.box-title{font-family:sans-serif;font-size:.7em!important;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#142033;margin:0 0 .6em!important}
+.box .nota{font-style:italic;color:#555}
+.box .beneficios{margin-top:.6em;padding-top:.5em;border-top:1px solid #d9cfb4}
+.box .seq{text-align:center;font-weight:600}
+.box.atencao{background:#f2e9d6;border-left-color:#C8AD80}
+.box.aviso{background:#f3e7e9;border-left-color:#742235}
+.box.atualizacao{background:#142033;color:#F7F3EA;border-left-color:#C8AD80}
+.box.atualizacao .box-title{color:#E8B965} .box.atualizacao p{color:#f3eddc}
+.box.profissional{background:#fbf8f1;border:1px solid #C8AD80;border-left:4px solid #C8AD80}
+.box.origem{background:#efe6d3;border-left-color:#430F1C}
+.box.ouvir{background:#C8AD80;border-left-color:#142033;color:#142033} .box.ouvir .box-title{color:#142033}
+.box.recomendacoes{background:#fff}
+blockquote.destaque{margin:1.2em 0;padding:.2em 1em;border-left:3px solid #C8AD80;font-family:"Lora",Georgia,serif;font-style:italic;color:#142033}
+blockquote.destaque cite{display:block;font-family:sans-serif;font-style:normal;font-size:.7em;letter-spacing:.12em;text-transform:uppercase;color:#8a7a56;margin-top:.6em}
+figure.fig{margin:1.4em 0;text-align:center;page-break-inside:avoid}
+figure.fig img{max-width:100%;height:auto}
+figure.fig figcaption{font-size:.8em;font-style:italic;color:#666;margin-top:.5em}
+dl.glossario dt{font-family:"Lora",Georgia,serif;font-weight:700;font-size:1.15em;color:#142033;margin:1.4em 0 .4em;border-top:1px solid #C8AD80;padding-top:.5em}
+dl.glossario dd{margin:0 0 .6em}
+table.tabela{width:100%;border-collapse:collapse;margin:1em 0;font-size:.95em}
+table.tabela caption{text-align:left;font-family:sans-serif;font-size:.7em;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#142033;padding-bottom:.4em}
+table.tabela th,table.tabela td{padding:.5em .6em;border-bottom:1px solid #e1d6bd;text-align:left;vertical-align:top}
+table.tabela thead th{background:#142033;color:#F7F3EA}
+.fonte-tabela{font-size:.8em;font-style:italic;color:#666}
+.publico div{border:1px solid #C8AD80;border-radius:6px;padding:.6em .9em;margin:.5em 0;background:#fbf8f1}
+.publico b{display:block;font-family:"Lora",Georgia,serif;color:#430F1C}
+.sobre-autora .foto{text-align:center;margin:0 0 1em}
+.sobre-autora .foto img{max-width:55%;border-radius:40% 40% 4px 4px;border:1px solid #C8AD80;padding:3px}
+.frontispicio-ep{text-align:center}
+.frontispicio-ep img{max-width:100%}
+.creditos{font-size:.85em;color:#3b4254}
+.creditos .cip{border:1px dashed #C8AD80;padding:.8em;margin:1em 0;color:#666}
+.refs li{margin-bottom:.6em}
+.refs ul{list-style:none;padding:0}
+.refs .pend{color:#8a7a56;font-style:italic}
+
+h1.part-title{font-family:"Lora",Georgia,serif;font-weight:700;font-size:2.2em;color:#F7F3EA;background:#142033;padding:2.2em 1em .5em;margin:1em 0 0;border-radius:6px 6px 0 0;border:none}
+h1.part-title.p2{background:#430F1C} h1.part-title.p3{background:#0a0a0a}
+h1.part-title .part-label{display:block;font-family:sans-serif;font-size:.34em;letter-spacing:.4em;text-transform:uppercase;color:#C8AD80;font-weight:600;margin-bottom:1em}
+div.part-sub,div.part-intro{margin:0;padding:.3em 1.6em 1.2em;color:#e8e1d0;background:#142033}
+div.part-sub.p2,div.part-intro.p2{background:#430F1C} div.part-sub.p3,div.part-intro.p3{background:#0a0a0a}
+div.part-intro{font-style:italic;font-size:.92em;padding-top:0}
+div.last{border-radius:0 0 6px 6px;margin-bottom:1.6em}
+
+div.nota{font-style:italic;color:#555;margin:0 0 .6em}
+div.seq{text-align:center;font-weight:600;margin:.4em 0}
+div.beneficios{margin-top:.6em;padding-top:.5em;border-top:1px solid #d9cfb4}
+div.lead-in{font-weight:600;margin-bottom:.3em}
+div.intro{margin-bottom:1em}
+div.fonte-tabela{font-size:.8em;font-style:italic;color:#666}
