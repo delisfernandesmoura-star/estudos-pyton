@@ -10,14 +10,13 @@ Guia de canto e cuidados com a voz a partir dos 50 anos, para aprender e para en
 - Referências permitidas (todas completas no livro): TITZE 1994; TITZE 2006; BEHLAU 2001; ALVES et al. 2019; STEMPLE et al. 1994; ZIEGLER et al. 2014; JOHNSON et al. 2020.
 
 ## Padrão visual
-- Formato 200 × 260 mm, 141 páginas. Fundo creme #F7F0E4, tinta #2B2622, dourado #B8904A; cor por parte: coral #D9846E, sálvia #7FA58A, dourado #B8904A, lavanda #9C8CC4, grafite #4A4F5C.
+- Formato 200 × 260 mm, 140 páginas. Fundo creme #F7F0E4, tinta #2B2622, dourado #B8904A; cor por parte: coral #D9846E, sálvia #7FA58A, dourado #B8904A, lavanda #9C8CC4, grafite #4A4F5C.
 - Texto em Atkinson Hyperlegible 14 pt (fonte criada para baixa visão), algarismos em Inter (sem zero cortado); títulos em Lora.
 - Quadros: Para praticar (com aviso de áudio), Para o professor, Por trás da ciência, Bom saber, Atenção; atividades "Sua vez" com linhas e caixas de marcar.
 - 13 ilustrações vetoriais originais (sfig.py): personagens, voz madura, postura, audição, hábitos, aquecimento, sinais de alerta, extensão, coral, plano de 12 semanas.
-- Página escura de áudios no final com QR code (placeholder).
+- Áudios: SEM página de QR code nem site. O livro digital fica hospedado numa plataforma que já reúne os áudios. Aviso "Áudios dos exercícios" logo no início (em "Como usar este livro"), e cada quadro "Para praticar" diz: "Áudio de apoio disponível na plataforma onde você adquiriu este livro."
 
 ## Pendências (dependem da autora)
-- URL do site de áudios para o QR code.
 - ISBN apenas na versão final (esta é versão de impressão e revisão).
 - Revisão técnica e ética pela autora antes de publicar.
 - EPUB quando o texto estiver aprovado.

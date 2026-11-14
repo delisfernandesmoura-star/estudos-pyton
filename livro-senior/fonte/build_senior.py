@@ -15,7 +15,7 @@ body=re.sub(r'<figure class="fig" data-fig="([\w-]+)">\s*<figcaption>(.*?)</figc
 body=re.sub(r'(?<![>\w])\(((?:[A-ZÀ-Ý][A-ZÀ-Ý .;&\'\-]*)(?: et al\.)?, \d{4}(?:; [A-ZÀ-Ý][A-ZÀ-Ý .\-]*(?: et al\.)?, \d{4})*)\)', r'<span class="cit">(\1)</span>', body)
 body=re.sub(r'<div class="linhas" data-n="(\d+)"></div>',lambda m:'<div class="linhas">'+'<div></div>'*int(m.group(1))+'</div>',body)
 ICON='<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8a6a2e" stroke-width="2.2" stroke-linecap="round"><path d="M3 15v-3a9 9 0 0 1 18 0v3"/><rect x="2.5" y="14.5" width="4.6" height="7" rx="1.6"/><rect x="16.9" y="14.5" width="4.6" height="7" rx="1.6"/></svg>'
-AUDIO=f'<p class="audio">{ICON}<span>Este exercício tem áudio de apoio. Veja a página {AUD}.</span></p>'
+AUDIO=f'<p class="audio">{ICON}<span>Áudio de apoio disponível na plataforma onde você adquiriu este livro.</span></p>'
 body=re.sub(r'(<div class="box praticar">.*?)(</div>)',lambda m:m.group(1)+AUDIO+m.group(2),body,flags=re.S)
 COL={1:"#D9846E",2:"#7FA58A",3:"#B8904A",4:"#9C8CC4",5:"#4A4F5C"}
 PART_OF={}
@@ -48,7 +48,7 @@ def toc_html():
     for n,lab,tit,chs in toc:
         o.append(f'<div class="part"><span class="dot" style="background:{COL[n]}"></span><span class="t">{lab} · {tit}</span><span class="p">{pg("parte-"+str(n))}</span></div>')
         for cid,num,t in chs: o.append(f'<div class="row"><span class="t">{num}. {t}</span><span class="p">{pg(cid)}</span></div>')
-    for k,t in (("referencias","Referências"),("audios","Áudios dos exercícios"),("sobre-autora","Sobre a autora")):
+    for k,t in (("referencias","Referências"),("sobre-autora","Sobre a autora")):
         o.append(f'<div class="fm"><span>{t}</span><span class="p">{pg(k)}</span></div>')
     return "\n".join(o)
 def fonts():
@@ -81,6 +81,7 @@ COMO='''<section class="fsec" id="como-usar"><h1>Como usar este livro</h1>
 <div class="lg professor"><b>Para o professor</b>Orientações para quem conduz aulas e corais.</div>
 <div class="lg ciencia"><b>Por trás da ciência</b>A explicação fonoaudiológica, com as fontes.</div>
 </div>
+<div class="aviso audios"><b>Áudios dos exercícios</b>Os áudios referidos neste livro estão disponíveis na plataforma onde o livro digital foi adquirido. Lá você encontra a referência de som, ritmo e afinação de cada exercício dos quadros “Para praticar”, para ouvir quantas vezes quiser.</div>
 </section>
 <section class="fsec" id="personagens"><h1>Quem caminha com você</h1>
 <p>Três personagens vão aparecer nas páginas deste livro. Talvez você se reconheça em algum deles.</p>
@@ -122,7 +123,6 @@ html=f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>A 
 {COMO}
 {body}
 {REFS}
-{AUDIOS}
 {AUTORA}
 <div class="pg"><img class="fill" src="back.png"></div>
 </body></html>'''

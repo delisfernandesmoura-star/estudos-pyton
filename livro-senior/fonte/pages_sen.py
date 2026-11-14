@@ -14,6 +14,5 @@ for num,lab,tit,chs in toc:
     c=find(f"parte-{num}",lambda t,T=norm(tit):T in t and len(t)<600,c)
     for cid,nn,t in chs: c=find(cid,lambda tx,N=nn,T=norm(t):(tx.startswith(f"{N}capítulo{N}") or tx.startswith(f"capítulo{N}{N}")) and T[:15] in tx[:200],c)
 c=find("referencias",lambda t:t.startswith("referências"),c)
-c=find("audios",lambda t:t.startswith("materialcomplementar"),c)
 find("sobre-autora",lambda t:t.startswith("sobreaautora"),c)
 json.dump(P,open("pages.json","w")); print(P)
