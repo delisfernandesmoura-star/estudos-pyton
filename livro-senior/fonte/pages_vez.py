@@ -1,7 +1,7 @@
 import subprocess, json, re
 toc=json.load(open("toc.json"))["toc"]
-n=int(re.search(r"Pages:\s+(\d+)",subprocess.check_output(["pdfinfo","senior.pdf"]).decode()).group(1))
-txt=[re.sub(r"\s+","",subprocess.check_output(["pdftotext","-f",str(i),"-l",str(i),"senior.pdf","-"]).decode()).lower() for i in range(1,n+1)]
+n=int(re.search(r"Pages:\s+(\d+)",subprocess.check_output(["pdfinfo","vez.pdf"]).decode()).group(1))
+txt=[re.sub(r"\s+","",subprocess.check_output(["pdftotext","-f",str(i),"-l",str(i),"vez.pdf","-"]).decode()).lower() for i in range(1,n+1)]
 def norm(s): return re.sub(r"\s+","",re.sub(r"<[^>]+>","",s)).lower()
 P={}
 def find(k,pred,frm=0):
@@ -10,9 +10,9 @@ def find(k,pred,frm=0):
     print("nf",k); return frm
 c=find("carta",lambda t:t.startswith("umacarta"))
 c=find("como-usar",lambda t:t.startswith("comousarestelivro"),c)
-for num,lab,tit,chs in toc:
-    c=find(f"parte-{num}",lambda t,T=norm(tit):T in t and len(t)<600,c)
-    for cid,nn,t in chs: c=find(cid,lambda tx,N=nn,T=norm(t):(tx.startswith(f"{N}capítulo{N}") or tx.startswith(f"capítulo{N}{N}")) and T[:15] in tx[:200],c)
+for num,tit,chs in toc:
+    c=find(f"parte-{num}",lambda t,T=norm(tit):T in t and len(t)<500,c)
+    for cid,nn,t in chs: c=find(cid,lambda tx,N=nn,T=norm(t):tx.startswith(f"capítulo{N}") and T[:15] in tx[:200],c)
 c=find("referencias",lambda t:t.startswith("referências"),c)
 find("sobre-autora",lambda t:t.startswith("sobreaautora"),c)
 json.dump(P,open("pages.json","w")); print(P)
