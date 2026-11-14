@@ -1,0 +1,52 @@
+@font-face{font-family:"Bodoni";font-weight:400;font-style:normal;src:url("../fonts/bodoni-moda-latin-400-normal.woff")}
+@font-face{font-family:"Bodoni";font-weight:400;font-style:italic;src:url("../fonts/bodoni-moda-latin-400-italic.woff")}
+body{margin:5%;line-height:1.6;color:#1F1F1F}
+h1,h2,h3{font-family:"Bodoni",Georgia,serif;font-weight:400;color:#161616;line-height:1.15;page-break-after:avoid}
+h1{font-size:2em;margin:1em 0 .6em}
+h1.front{border-top:1px solid #B8975A;padding-top:.6em}
+h2{font-size:1.7em;margin:1.2em 0 .8em}
+h2 .chapter-num{display:block;font-family:sans-serif;font-size:.42em;letter-spacing:.32em;text-transform:uppercase;color:#B8975A;margin-bottom:.6em}
+h3{font-size:1.3em;margin:1.4em 0 .5em}
+h4{font-family:sans-serif;font-size:.75em;letter-spacing:.24em;text-transform:uppercase;color:#B8975A;margin:1.4em 0 .5em}
+p{margin:0 0 .8em}
+.lead{font-family:"Bodoni",Georgia,serif;font-size:1.12em;margin-bottom:.8em}
+.cit{font-size:.8em;color:#8f887c}
+h1.part-title{background:#161616;color:#EFE8DC;padding:2em 1em .4em;margin:0;border:none;font-size:2.3em}
+h1.part-title .part-label{display:block;font-family:sans-serif;font-size:.3em;letter-spacing:.42em;text-transform:uppercase;color:#C8AD80;margin-bottom:1em}
+div.part-sub,div.part-intro{background:#161616;color:#d8d1c3;padding:.2em 1.6em 1em;margin:0}
+div.part-intro{font-family:"Bodoni",Georgia,serif;font-style:italic}
+div.part-photo{background:#161616;text-align:center;padding:0 0 1.4em;margin:0 0 1.6em}
+div.part-photo img{max-width:70%}
+.quote-ep,.epigrafe{background:#161616;color:#EFE8DC;padding:2em 1.4em;margin:2em 0;page-break-inside:avoid}
+.quote-ep .q,.epigrafe .q{font-family:"Bodoni",Georgia,serif;font-size:1.6em;line-height:1.25}
+.quote-ep .src,.epigrafe .src{font-family:sans-serif;font-size:.7em;letter-spacing:.3em;text-transform:uppercase;color:#C8AD80;margin-top:1.2em}
+.box{margin:1.2em 0;padding:.9em 1em .5em;background:#FFFFFF;border-top:2px solid #B8975A;font-size:.95em}
+.box-title{font-family:sans-serif;font-size:.7em;letter-spacing:.26em;text-transform:uppercase;font-weight:600;color:#B8975A;margin-bottom:.6em}
+.box.exercicio .box-title:before{content:"Exercício · ";color:#8f887c}
+.box.atencao,.box.aviso{background:#ECEAE6;border-top-color:#161616}
+.box.atualizacao{background:#161616;color:#EFE8DC;border-top-color:#B8975A}
+.box.atualizacao .box-title{color:#C8AD80}
+.box.profissional,.box.origem{background:#F3EEE5}
+.box.ouvir{background:transparent;border-top:1px solid #161616;border-bottom:1px solid #161616}
+.nota{font-style:italic;color:#6b655c}
+.seq{text-align:center;font-family:"Bodoni",Georgia,serif;margin:.5em 0}
+.beneficios{margin-top:.6em;padding-top:.5em;border-top:1px solid #e2dace}
+.audio{margin-top:.8em;padding-top:.5em;border-top:1px solid #e2dace;font-size:.78em;color:#8a7348;letter-spacing:.04em}
+blockquote.destaque{margin:1.4em 0;padding:0 0 0 1em;border-left:1px solid #B8975A;font-family:"Bodoni",Georgia,serif;font-style:italic;font-size:1.1em}
+blockquote.destaque cite{display:block;font-family:sans-serif;font-style:normal;font-size:.65em;letter-spacing:.24em;text-transform:uppercase;color:#B8975A;margin-top:.6em}
+figure.fig{margin:1.4em 0;text-align:center;page-break-inside:avoid}
+figure.fig img{max-width:100%;height:auto}
+figure.fig figcaption{font-size:.8em;font-style:italic;color:#6b655c;margin-top:.5em}
+dl.glossario dt{font-family:"Bodoni",Georgia,serif;font-size:1.25em;margin:1.4em 0 .4em;border-top:1px solid #d6cdbd;padding-top:.5em}
+dl.glossario dd{margin:0 0 .6em}
+table.tabela{width:100%;border-collapse:collapse;margin:1em 0;font-size:.92em}
+table.tabela caption{text-align:left;font-family:sans-serif;font-size:.7em;letter-spacing:.24em;text-transform:uppercase;color:#B8975A;padding-bottom:.4em}
+table.tabela th,table.tabela td{padding:.5em .6em;border-bottom:1px solid #d6cdbd;text-align:left;vertical-align:top}
+table.tabela thead th{background:#161616;color:#EFE8DC}
+.publico div{background:#FFFFFF;padding:.7em .9em;margin:.5em 0}
+.publico b{display:block;font-family:"Bodoni",Georgia,serif;font-size:1.1em}
+.autora-photo{text-align:center;margin:0 0 1em}
+.autora-photo img{max-width:60%}
+.creditos{font-size:.85em;color:#4a463f}
+.cip,.qr-ep{border:1px dashed #B8975A;padding:.8em;margin:1em 0;color:#6b655c;text-align:center}
+.pend{color:#8f887c;font-style:italic}

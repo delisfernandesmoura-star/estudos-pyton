@@ -1,69 +1,57 @@
-# Notas de revisão: livro da Dra. Brízia Lacerda
+# Voz, Canto e Ciência: notas de revisão
 
-Título atual: **Voz, Canto e Ciência**
-Subtítulo: *Saúde vocal, técnica vocal e inspiração: fonoaudiologia aplicada à voz cantada e falada*
+**Título:** Voz, Canto e Ciência
+**Subtítulo:** Saúde vocal, técnica vocal e inspiração: fonoaudiologia aplicada à voz cantada e falada
+**Autora:** Dra. Brízia Lacerda
 
-A capa foi refeita a partir da referência enviada: a palavra gigante VOZ vazada sobre o rosto da autora, com foto em tom monocromático quente. A contracapa segue o mesmo estilo.
+## Arquivos
+| Arquivo | O que é |
+|---|---|
+| `voz-canto-e-ciencia_PDF-premium.pdf` | Versão principal. 137 páginas, 17 × 24 cm. |
+| `voz-canto-e-ciencia_layout-fixo.epub` | EPUB de layout fixo, idêntico ao PDF (cada página é uma imagem). |
+| `voz-canto-e-ciencia.epub` | EPUB fluido: o texto se ajusta à tela, para leitura no celular. |
+| `capa.png` | Capa aprovada (1600 × 2264 px). |
+| `fonte/` | Arquivos-fonte para futuras edições. |
 
-## 1. Sugestões de título consideradas (para busca orgânica)
-Estas sugestões são raciocínio editorial, sem medição de volume de busca. Vale testar no Google Trends e no preenchimento automático do YouTube e do Google antes de decidir.
+## Projeto gráfico
+- **Paleta:** creme, preto suave, dourado, cinza claro e branco. Não há azul nem bordô.
+- **Tipografia:** Bodoni nos títulos e números, Inter no texto.
+- **Tipos de página:**
+  - creme para o texto;
+  - pretas com frases de impacto (8 frases, mais a epígrafe), todas tiradas do próprio texto;
+  - aberturas das partes em preto, com foto em preto e branco esfumada;
+  - capítulos com numeração grande em dourado.
+- **Ilustrações:** 18 ilustrações originais em traço fino, sem rosto de ninguém:
+  - anatomia: aparelho fonador, laringe de frente e em corte, ciclo glótico, diafragma e báscula;
+  - postura e respiração: ponto de partida e tipos de respiração;
+  - ondas sonoras: fonte e filtro, frequência e intensidade;
+  - técnica e ornamentos: registros, extensão das vozes, fry, twang, yodel, vibrato, melisma e apogiatura.
+- **Fotos da autora:**
+  - todas em preto e branco, sem alteração do rosto e sem ampliação além do tamanho natural;
+  - nove fotos ao todo: capa, frontispício, "Sobre a autora", três aberturas de parte, duas páginas de frase e a contracapa;
+  - não usei a foto da turma.
+- **Áudios:**
+  - cada exercício tem a indicação "Áudio deste exercício disponível para download · veja a página 136";
+  - a página 136 é a dos áudios, com QR code e endereço do site.
 
-1. **Técnica Vocal na Prática**: guia completo de canto, saúde vocal e ornamentos (título atual). "Técnica vocal" e "canto" são termos de busca diretos.
-2. **Como Cantar com Saúde**: técnica vocal, respiração e ornamentos. Combina com a busca "como cantar".
-3. **Aprender a Cantar com Ciência**: saúde vocal, respiração e técnica. Marca o diferencial de ciência e fonoaudiologia.
-4. **Saúde Vocal para Cantores e Professores de Canto**. Captura quem busca "saúde vocal" ou "cuidados com a voz".
-5. **A Voz do Cantor**: manual de técnica vocal, saúde e performance.
-6. **Voz em Movimento**. É o conceito da marca (manual da Faculdade da Voz), mais branding do que busca.
+## O que falta da autora ou de vocês
+1. **Site dos áudios:** com o endereço, eu gero o QR code verdadeiro e substituo os marcadores "[QR CODE]" e "[endereço do site]".
+2. **ISBN e ficha catalográfica (CIP):** estão como marcadores na página de créditos.
+3. **Artigo científico da autora:** não localizado na web. Preciso da referência.
+4. **Bio:** confirmar o ano de formação (PUC Minas), a pós-graduação em voz e o papel dela na Faculdade da Voz.
+5. **Referências incompletas:** Coelho (1994), Gava Junior (2010), Marsola e Baê (2000; uma fonte cita 2001), Mazzoleni (2012), Paget (1940), Curcio, Behlau e Pontes (2000).
+6. **Dados a confirmar:**
+   - Dinville (Enelivros, 1993);
+   - Ladefoged e Maddieson (o original dizia 1993; usei 1996);
+   - Behlau (Revinter, 2001);
+   - Pinnock et al. (1990) e Wüthrich et al. (2005).
+7. **Conteúdo clínico:** sugiro revisão da autora para a lista de medicamentos e as afirmações sobre vitamina C e sprays, que vêm do original sem fonte.
 
-Dica: o subtítulo é onde entram as palavras de busca ("aprender a cantar", "aula de canto", "fonoaudiólogos"). O título pode ser mais curto e de marca.
-
-## 2. O que eu preciso da autora
-- **Artigo científico publicado**: não consegui localizar na web. Preciso da referência para citar na bio e, se fizer sentido, no corpo do livro.
-- **Bio**: confirmar ano de formação (PUC Minas), nome e instituição da pós-graduação/especialização em voz, e o papel exato dela na Faculdade da Voz (usei "à frente da Faculdade da Voz").
-- **Referências incompletas** (aparecem marcadas na lista final do livro): Coelho (1994), Gava Junior (2010), Marsola e Baê (2000; uma fonte cita 2001), Mazzoleni (2012), Paget (1940), Curcio, Behlau e Pontes (2000).
-- **Para confirmar**:
-  - Dinville (usei: Rio de Janeiro: Enelivros, 1993).
-  - Ladefoged e Maddieson (o material original dizia 1993; usei 1996, Blackwell).
-  - Behlau, *Voz: o livro do especialista* (usei Revinter, 2001).
-  - Pinnock et al. 1990 (volume e páginas) e autores de Wüthrich et al. 2005 (confirmados pelo título e periódico).
-- **ISBN e ficha catalográfica (CIP)**: estão como marcadores na página de créditos.
-
-## 3. Correções feitas no texto
-- Erros de digitação e de nomes próprios corrigidos (Christina Aguilera, Duke Ellington, Dizzy Gillespie, Charlie Christian, Def Leppard, David Bowie, Madonna, Hermeto Pascoal, Jimmie Rodgers, Ladefoged etc.).
-- **Frases cortadas completadas** (revisar o sentido):
-  - Alergias: medicamentos com efeitos de ressecamento.
-  - Gestação: limitação vocal em voz profissional.
-  - Yodel: frase inicial reescrita.
-- **Fry**: o parágrafo inicial falava de fricativas e foi reescrito para ligar ao tema (com Hollien e Michel, 1968).
-- **Castrati**: removi "Igreja Ortodoxa Grega" e "cinco anos de idade", por serem historicamente duvidosos. Conferir.
-- **"Ponto de Partida"** (usado nos exercícios de apoio e não definido no original): defini a partir das "Orientações gerais".
-- Editei levemente a gramática de trechos confusos (por exemplo, no Capítulo 1).
-
-## 4. Atualizações científicas acrescentadas
-- **Hidratação**: Alves et al., 2019 (revisão sistemática no *Journal of Voice*).
-- **Leite e derivados**: o original dizia que aumentam o muco. A literatura (Pinnock et al., 1990; Wüthrich et al., 2005) não confirma isso. Reescrevi a orientação.
-- **Twang e cry**: origem no modelo de Jo Estill (Yanagisawa et al., 1989; Steinhauer, Klimek e Estill, 2017).
-- **Belting**: Sundberg, Gramming e LoVetri (1993) e Björkner (2008).
-- **Vibrato**: Sundberg (1987).
-- **Música popular**: parágrafo sobre os anos 1990 até hoje e quadro "Hoje" sobre melismas.
-- **Quadros para os públicos do livro**: fonoaudiólogos que atendem cantores e quem fala em público.
-- **Conteúdo clínico (sugestão)**: pedir revisão da própria autora ou de um médico para a lista de medicamentos e as afirmações sobre vitamina C, sprays e "gotículas de gaze", que o original traz sem fonte.
-
-## 5. Imagens
-- Não reproduzi as imagens das apostilas.
-- Os sites de imagens livres (Wikimedia, Unsplash, Pexels) estão bloqueados neste ambiente. Criei cinco **ilustrações originais** nas cores da marca: registros, extensão das vozes sobre o teclado, laringe, ciclo glótico e tipos de respiração.
-- Se quiser ilustrações anatômicas realistas ou fotos de banco, é preciso liberar o acesso à rede ou enviar os arquivos.
-- As 4 fotos da autora foram só recortadas (nada alterado): capa, frontispício, "Sobre a autora" e contracapa.
-
-## 6. Arquivos
-- `voz-canto-e-ciencia.epub`: livro digital (Amazon KDP, Google Play Livros).
-- `voz-canto-e-ciencia_PDF-de-prova.pdf`: prova em formato A5 (108 páginas).
-- `capa.png`: capa (1600 x 2264 px).
-- `fonte/`: arquivos-fonte para futuras edições.
-
-## 7. Identidade visual aplicada
-Manual de Marca Faculdade da Voz 2026:
-- Cores: azul executivo #142033, bordô #430F1C, dourado champagne #C8AD80, marfim #F7F3EA e preto.
-- Fontes: Lora (títulos) e Inter (textos).
-- Logos oficiais, sem alteração.
-- Uma cor por parte: Parte I azul, Parte II bordô, Parte III preto. A capa é preto e dourado.
+## Edições feitas no texto
+- **Correções:** erros de digitação e de nomes próprios, e frases cortadas completadas (alergias, gestação e início do Yodel).
+- **Fry:** reescrevi o parágrafo inicial.
+- **Castrati:** removi detalhes historicamente duvidosos.
+- **Ponto de Partida:** acrescentei a definição, com uma ilustração.
+- **Atualizações científicas com fonte:** hidratação, leite e derivados, twang e cry (modelo Estill), belting e vibrato.
+- **Quadros novos:** para fonoaudiólogos e para quem fala em público.
+- **Música popular:** parágrafo de 1990 até hoje.
