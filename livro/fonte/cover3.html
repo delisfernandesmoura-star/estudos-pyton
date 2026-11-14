@@ -6,11 +6,11 @@
 @font-face{font-family:Inter;font-weight:600;src:url(file:///tmp/work/fonts/node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
 html,body{margin:0}
 .c{width:1600px;height:2264px;position:relative;overflow:hidden;background:#EDE6D8;font-family:Inter;color:#142033}
-.ph{position:absolute;width:var(--pw,2300px);left:var(--pl,-585px);top:var(--pt,-60px);filter:grayscale(1) sepia(.3) contrast(1.14) brightness(.8)}
-.shade{position:absolute;left:800px;right:0;top:0;bottom:0;background:linear-gradient(90deg,rgba(20,32,51,0) 0%,rgba(20,32,51,.5) 100%)}
-.shade3{position:absolute;left:800px;right:0;top:0;height:520px;background:linear-gradient(180deg,rgba(20,32,51,.62),rgba(20,32,51,0))}
+.ph{position:absolute;width:var(--pw,2300px);left:var(--pl,-585px);top:var(--pt,-60px);filter:grayscale(1) contrast(1.12) brightness(.84)}
+.shade{position:absolute;left:800px;right:0;top:0;bottom:0;background:linear-gradient(90deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.5) 100%)}
+.shade3{position:absolute;left:800px;right:0;top:0;height:520px;background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,0))}
 .grain{position:absolute;left:800px;right:0;top:0;bottom:0;mix-blend-mode:soft-light;opacity:.55}
-.shade2{position:absolute;left:800px;right:0;bottom:0;height:1000px;background:linear-gradient(180deg,rgba(20,32,51,0),rgba(20,32,51,.78))}
+.shade2{position:absolute;left:800px;right:0;bottom:0;height:1000px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.8))}
 svg.paper{position:absolute;left:0;top:0}
 .top{position:absolute;left:100px;top:104px;font-size:20px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:#142033;width:640px;line-height:1.8}
 .top::after{content:"";display:block;width:70px;height:2px;background:#C8AD80;margin-top:22px}
@@ -23,7 +23,7 @@ svg.paper{position:absolute;left:0;top:0}
 .autor{position:absolute;right:100px;bottom:104px;text-align:right;color:#F7F3EA;font-weight:600;font-size:30px;letter-spacing:.42em;padding-left:.42em}
 .autor small{display:block;font-weight:400;font-size:20px;letter-spacing:.2em;color:#C8AD80;margin-top:14px;padding-left:.2em}
 </style></head><body><div class="c">
-<div id="bgtop" style="position:absolute;left:0;right:0;top:0;height:var(--bt,0px);background:#dacabd;filter:grayscale(1) sepia(.3) contrast(1.14) brightness(.8)"></div>
+<div id="bgtop" style="position:absolute;left:0;right:0;top:0;height:var(--bt,0px);background:#dacabd;filter:grayscale(1) contrast(1.12) brightness(.84)"></div>
 <img class="ph" src="assets/foto2.jpg">
 <div class="shade"></div><div class="shade2"></div><div class="shade3"></div>
 <svg class="grain" width="800" height="2264"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="9"/><feColorMatrix type="saturate" values="0"/></filter><rect width="800" height="2264" filter="url(#g)"/></svg>
@@ -34,9 +34,7 @@ svg.paper{position:absolute;left:0;top:0}
    <g id="lt" fill="#000" font-family="Bodoni" font-weight="500" font-size="var(--fs,820px)" text-anchor="end">
     <text x="800" y="var(--y1)">V</text><text x="800" y="var(--y2)">O</text><text x="800" y="var(--y3)">Z</text></g></mask>
  </defs>
- <g mask="url(#m)"><rect x="0" y="0" width="800" height="2264" fill="#EDE6D8"/><rect x="0" y="0" width="800" height="2264" filter="url(#n)" opacity=".5"/></g>
- <g id="ol" fill="none" stroke="#142033" stroke-width="1.6" stroke-opacity=".7" font-family="Bodoni" font-weight="500" font-size="var(--fs,820px)" text-anchor="end">
-    <text x="800" y="var(--y1)">V</text><text x="800" y="var(--y2)">O</text><text x="800" y="var(--y3)">Z</text></g>
+ <g mask="url(#m)"><rect x="0" y="0" width="800" height="2264" fill="#EDE6D8"/></g>
 </svg>
 <div class="top">Saúde vocal · Técnica · Inspiração</div>
 <div class="tag">Ciência para entender.<br>Arte para emocionar.</div>
@@ -44,10 +42,19 @@ svg.paper{position:absolute;left:0;top:0}
 <div class="autor">DRA. BRÍZIA LACERDA<small>FONOAUDIÓLOGA · ESPECIALISTA EM VOZ</small></div>
 </div>
 <script>
-// SVG attributes cannot use CSS vars for y/font-size reliably; apply from params
 const q=new URLSearchParams(location.search);
-const fs=+(q.get('fs')||800), y1=+(q.get('y1')||760), y2=+(q.get('y2')||1360), y3=+(q.get('y3')||1960);
-for(const g of document.querySelectorAll('#lt,#ol')){g.setAttribute('font-size',fs);const t=g.querySelectorAll('text');t[0].setAttribute('y',y1);t[1].setAttribute('y',y2);t[2].setAttribute('y',y3);}
+const D={fs:700,y1:764,y2:1384,y3:2004,pw:2700,pl:-833,pt:93,bt:130,rt:1640};
+const P=k=>+(q.get(k)||D[k]);
+const lt=document.getElementById('lt'); lt.setAttribute('font-size',P('fs'));
+const t=lt.querySelectorAll('text'); t[0].setAttribute('y',P('y1'));t[1].setAttribute('y',P('y2'));t[2].setAttribute('y',P('y3'));
 const r=document.documentElement.style;
-if(q.get('pw'))r.setProperty('--pw',q.get('pw')+'px');if(q.get('pl'))r.setProperty('--pl',q.get('pl')+'px');if(q.get('pt'))r.setProperty('--pt',q.get('pt')+'px');if(q.get('bt'))r.setProperty('--bt',q.get('bt')+'px');if(q.get('rt'))r.setProperty('--rt',q.get('rt')+'px');
+r.setProperty('--pw',P('pw')+'px');r.setProperty('--pl',P('pl')+'px');r.setProperty('--pt',P('pt')+'px');r.setProperty('--bt',P('bt')+'px');r.setProperty('--rt',P('rt')+'px');
+document.fonts.ready.then(()=>{
+  const c=document.createElement('canvas').getContext('2d'); c.font='500 '+P('fs')+'px Bodoni'; c.textAlign='right';
+  const ink=ch=>{const m=c.measureText(ch);return [800-m.actualBoundingBoxLeft,800+m.actualBoundingBoxRight]};
+  const [vl,vr]=ink('V'), [zl,zr]=ink('Z');
+  const s=(vr-vl)/(zr-zl), tx=vr-s*zr;
+  t[2].setAttribute('transform','translate('+tx+',0) scale('+s+',1)');
+  window.__ink={vl,vr,zl,zr,s,tx};
+});
 </script></body></html>
