@@ -1,8 +1,11 @@
 # Notas de revisão: livro da Dra. Brízia Lacerda
 
-Título de trabalho: **Técnica Vocal na Prática** (provisório, veja as sugestões abaixo).
+Título atual: **Voz, Canto e Ciência**
+Subtítulo: *Saúde vocal, técnica vocal e inspiração: fonoaudiologia aplicada à voz cantada e falada*
 
-## 1. Sugestões de título (para busca orgânica)
+A capa foi refeita a partir da referência enviada: a palavra gigante VOZ vazada sobre o rosto da autora, com foto em tom monocromático quente. A contracapa segue o mesmo estilo.
+
+## 1. Sugestões de título consideradas (para busca orgânica)
 Estas sugestões são raciocínio editorial, sem medição de volume de busca. Vale testar no Google Trends e no preenchimento automático do YouTube e do Google antes de decidir.
 
 1. **Técnica Vocal na Prática**: guia completo de canto, saúde vocal e ornamentos (título atual). "Técnica vocal" e "canto" são termos de busca diretos.
@@ -53,9 +56,9 @@ Dica: o subtítulo é onde entram as palavras de busca ("aprender a cantar", "au
 - As 4 fotos da autora foram só recortadas (nada alterado): capa, frontispício, "Sobre a autora" e contracapa.
 
 ## 6. Arquivos
-- `tecnica-vocal-na-pratica.epub`: livro digital (Amazon KDP, Google Play Livros).
-- `tecnica-vocal-na-pratica_PDF-de-prova.pdf`: prova em formato A5 (108 páginas).
-- `capa.png`: capa (1600 x 2560 px).
+- `voz-canto-e-ciencia.epub`: livro digital (Amazon KDP, Google Play Livros).
+- `voz-canto-e-ciencia_PDF-de-prova.pdf`: prova em formato A5 (108 páginas).
+- `capa.png`: capa (1600 x 2264 px).
 - `fonte/`: arquivos-fonte para futuras edições.
 
 ## 7. Identidade visual aplicada

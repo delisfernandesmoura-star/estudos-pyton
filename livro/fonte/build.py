@@ -1,6 +1,6 @@
 import re, json, os, sys, html
-TITLE="Técnica Vocal na Prática"
-SUB="Guia completo de canto, saúde vocal e ornamentos para cantores, professores de canto, comunicadores e fonoaudiólogos"
+TITLE="Voz, Canto e Ciência"
+SUB="Saúde vocal, técnica vocal e inspiração: fonoaudiologia aplicada à voz cantada e falada"
 AUTHOR="Dra. Brízia Lacerda"
 FONTS="/tmp/work/fonts/node_modules/@fontsource/"
 pages=json.load(open("pages.json")) if os.path.exists("pages.json") else {}

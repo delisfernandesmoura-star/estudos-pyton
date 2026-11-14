@@ -1,25 +1,43 @@
 <!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Lora;font-weight:600;src:url(file:///tmp/work/fonts/node_modules/@fontsource/lora/files/lora-latin-600-normal.woff2)}
 @font-face{font-family:Lora;font-weight:700;src:url(file:///tmp/work/fonts/node_modules/@fontsource/lora/files/lora-latin-700-normal.woff2)}
-@font-face{font-family:Lora;font-weight:700;font-style:italic;src:url(file:///tmp/work/fonts/node_modules/@fontsource/lora/files/lora-latin-700-italic.woff2)}
 @font-face{font-family:Inter;font-weight:400;src:url(file:///tmp/work/fonts/node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2)}
 @font-face{font-family:Inter;font-weight:600;src:url(file:///tmp/work/fonts/node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
 html,body{margin:0}
-.c{width:1600px;height:var(--h,2264px);position:relative;overflow:hidden;background:linear-gradient(180deg,#000 0%,#05070b 50%,#142033 135%);color:#F7F3EA;font-family:Inter}
-.in{position:absolute;left:0;top:calc((var(--h,2264px) - 2264px)/2);width:1600px;height:2264px}
-.frame{position:absolute;inset:50px;border:2px solid rgba(200,173,128,.5);top:calc(50px + (var(--h,2264px) - 2264px)/2*0);}
-.logo{position:absolute;top:140px;left:50%;transform:translateX(-50%);width:540px}
-h1{position:absolute;top:370px;left:0;right:0;margin:0;text-align:center;font-family:Lora;font-weight:700;font-size:184px;line-height:1.04;letter-spacing:-.01em}
-h1 i{color:#C8AD80;font-style:italic}
-.sub{position:absolute;top:800px;left:50%;transform:translateX(-50%);width:1100px;text-align:center;font-size:39px;line-height:1.5;letter-spacing:.04em;color:rgba(247,243,234,.86)}
-.ring{position:absolute;left:50%;top:1040px;transform:translateX(-50%);width:820px;height:940px;border:2px solid #C8AD80;border-radius:410px 410px 6px 6px}
-.photo{position:absolute;left:50%;top:1062px;transform:translateX(-50%);width:776px;height:896px;border-radius:388px 388px 0 0;overflow:hidden}
-.photo img{width:100%;height:100%;object-fit:cover;object-position:50% 14%}
-.name{position:absolute;top:2040px;left:0;right:0;text-align:center;font-weight:600;font-size:46px;letter-spacing:.44em;color:#C8AD80;padding-left:.44em}
-</style></head><body><div class="c"><div class="in">
-<img class="logo" src="assets/logo_creme.png">
-<h1>Técnica Vocal<br><i>na Prática</i></h1>
-<div class="sub">Guia completo de canto, saúde vocal e ornamentos para cantores, professores de canto, comunicadores e fonoaudiólogos</div>
-<div class="ring"></div>
-<div class="photo"><img src="assets/foto2.jpg"></div>
-<div class="name">DRA. BRÍZIA LACERDA</div>
-</div><div class="frame" style="top:50px;bottom:50px;left:50px;right:50px;inset:50px"></div></div></body></html>
+.c{width:1600px;height:2264px;position:relative;overflow:hidden;background:#EDE6D8;font-family:Inter;color:#142033}
+.ph{position:absolute;width:2300px;left:-585px;top:-60px;filter:grayscale(1) sepia(.3) contrast(1.14) brightness(.8)}
+.shade{position:absolute;left:800px;right:0;top:0;bottom:0;background:linear-gradient(90deg,rgba(20,32,51,0) 0%,rgba(20,32,51,.55) 100%)}
+.shade2{position:absolute;left:0;right:0;bottom:0;height:520px;background:linear-gradient(180deg,rgba(20,32,51,0),rgba(20,32,51,.6))}
+svg.paper{position:absolute;left:0;top:0}
+.logo{position:absolute;left:100px;top:96px;width:400px}
+.tag{position:absolute;left:100px;top:760px;width:200px;font-family:Lora;font-weight:600;font-size:27px;line-height:1.5;letter-spacing:.06em;text-transform:uppercase}
+.orn{position:absolute;left:100px;font-size:26px;color:#a58b5c}
+.titulo{position:absolute;left:100px;top:1924px;width:700px;text-align:right;font-family:Lora;font-weight:600;font-size:46px;letter-spacing:.16em;text-transform:uppercase;line-height:1.1;white-space:nowrap}
+.rule{position:absolute;left:100px;top:2008px;width:700px;height:2px;background:#C8AD80}
+.sub{position:absolute;left:100px;top:2036px;width:700px;font-size:29px;line-height:1.46}
+.autor{position:absolute;right:100px;bottom:112px;text-align:right;font-weight:600;font-size:36px;letter-spacing:.42em;color:#F7F3EA;padding-left:.42em}
+.autor::before{content:"";display:block;width:120px;height:2px;background:#C8AD80;margin:0 0 30px auto}
+.autor small{display:block;font-weight:400;font-size:21px;letter-spacing:.16em;padding-left:.16em;color:#C8AD80;margin-top:16px}
+</style></head><body><div class="c">
+<img class="ph" src="assets/foto2.jpg">
+<div class="shade"></div><div class="shade2"></div>
+<svg class="paper" width="1600" height="2264" viewBox="0 0 1600 2264">
+ <defs>
+  <filter id="n" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="4"/><feColorMatrix values="0 0 0 0 0.35  0 0 0 0 0.3  0 0 0 0 0.22  0 0 0 0.55 0"/></filter>
+  <mask id="m"><rect x="0" y="0" width="800" height="2264" fill="#fff"/>
+   <g fill="#000" font-family="Lora" font-weight="600" font-size="640" text-anchor="end">
+    <text x="800" y="800">V</text><text x="800" y="1340">O</text><text x="800" y="1880">Z</text></g></mask>
+ </defs>
+ <g mask="url(#m)"><rect x="0" y="0" width="800" height="2264" fill="#EDE6D8"/><rect x="0" y="0" width="800" height="2264" filter="url(#n)" opacity=".5"/></g>
+ <g fill="none" stroke="#142033" stroke-width="3" stroke-opacity=".55" font-family="Lora" font-weight="600" font-size="640" text-anchor="end">
+    <text x="800" y="800">V</text><text x="800" y="1340">O</text><text x="800" y="1880">Z</text></g>
+ <rect x="799" y="0" width="2" height="2264" fill="#C8AD80" opacity=".0"/>
+</svg>
+<img class="logo" src="assets/logo_azul.png">
+<div class="tag">Ciência<br>para<br>entender.<br>Arte para<br>emocionar.</div>
+<div class="orn" style="top:700px">✦</div><div class="orn" style="top:1250px">✦</div>
+<div class="titulo">Canto e Ciência</div>
+<div class="rule"></div>
+<div class="sub">Saúde vocal, técnica vocal e inspiração: fonoaudiologia aplicada à voz cantada e falada</div>
+<div class="autor">DRA. BRÍZIA LACERDA<small>FONOAUDIÓLOGA · ESPECIALISTA EM VOZ</small></div>
+</div></body></html>
