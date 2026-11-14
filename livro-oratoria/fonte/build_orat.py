@@ -76,22 +76,23 @@ def toc_html():
     for sid,lab,tit,chs in toc:
         o.append(f'<div class="part"><span class="k">{lab}</span><span class="t">{tit}</span><span class="p">{pg(sid)}</span></div>')
         for cid,n,t in chs: o.append(f'<div class="row"><span class="n">{n}</span><span class="t">{t}</span><span class="p">{pg(cid)}</span></div>')
-    o.append(f'<div class="fm" style="margin-top:6mm"><span>Referências</span><span class="p">{pg("referencias")}</span></div>')
+    o.append(f'<div class="fm" style="margin-top:6mm"><span>Apêndice · A estante da oratória</span><span class="p">{pg("estante")}</span></div>')
+    o.append(f'<div class="fm"><span>Referências</span><span class="p">{pg("referencias")}</span></div>')
     return "\n".join(o)
 SOBRE_LIVRO='''<section class="fsec" id="sobre-livro"><div class="kick">Apresentação</div><h1>Sobre este livro</h1><div class="rule"></div>
 <p class="lead">Antes do discurso, existe a voz. Antes do palco, existe o cuidado.</p>
-<p>Muitos livros de oratória ensinam o que dizer. Este começa pelo instrumento que diz. Como fonoaudióloga especialista em voz, aprendi que a melhor mensagem perde força quando a voz falha, cansa ou não chega ao ouvinte, e que uma voz bem cuidada e preparada dá segurança para todo o resto.</p>
-<p>Por isso, o livro segue uma ordem: primeiro, como a voz funciona e como protegê-la no dia a dia; depois, a preparação vocal, com aquecimento, desaquecimento, respiração e articulação; em seguida, os recursos de comunicação, como a música da fala, a presença e a construção da mensagem; e, por fim, o palco, a confiança e um plano de treinamento.</p>
-<p>O conteúdo reúne a fonoaudiologia e a literatura brasileira sobre voz e expressividade, a experiência da autora com cantores e profissionais da voz e as ideias centrais dos livros de oratória mais lidos no mundo, sempre filtradas pelo que a ciência da voz recomenda.</p>
+<p>Existem livros excelentes sobre oratória. Durante anos, eu li, estudei e testei os mais influentes do mundo, dos guias do TED aos clássicos de Dale Carnegie, dos estudos sobre mensagens que ficam na memória às técnicas para falar de improviso. Ao mesmo tempo, eu me aprofundei na literatura brasileira de voz e expressividade, que é a base do meu trabalho como fonoaudióloga.</p>
+<p>Este livro é o resultado dessa curadoria. Eu reuni o que esses autores têm de mais útil, passei cada ideia pelo filtro da fonoaudiologia e organizei tudo em um guia prático, na ordem em que a voz precisa ser cuidada: primeiro o instrumento, depois a preparação vocal, em seguida a técnica de comunicação e, por fim, o palco e o treino. Você não precisa ler dezenas de livros para chegar ao essencial: eu fiz esse caminho e trago aqui o que realmente funciona, com o crédito de cada fonte.</p>
+<p>Ao longo dos capítulos, os quadros <strong>Da estante</strong> apresentam a técnica central de cada obra de referência, seguida do <strong>filtro da fonoaudióloga</strong>: o que vale adotar, o que adaptar e o que evitar para proteger a sua voz. No final, o apêndice <strong>A estante da oratória</strong> resume cada livro para consulta rápida.</p>
 <h3>Para quem é este livro</h3>
 <div class="publico">
 <div><b>Quem fala em público</b><span>Palestrantes, líderes, advogados, vendedores, religiosos e criadores de conteúdo.</span></div>
 <div><b>Professores</b><span>Quem usa a voz por horas, todos os dias, e precisa dela saudável e expressiva.</span></div>
 <div><b>Quem quer perder o medo</b><span>Preparação, respiração e treino para transformar o nervosismo em presença.</span></div>
-<div><b>Fonoaudiólogos e treinadores</b><span>Base técnica e roteiro de treinamento para quem prepara outras pessoas.</span></div>
+<div><b>Fonoaudiólogos e treinadores</b><span>Base técnica, curadoria de referências e um roteiro de treinamento para quem prepara outras pessoas.</span></div>
 </div>
 <div class="aviso-aud"><b>Áudios dos exercícios</b>Os áudios referidos neste livro estão disponíveis na plataforma onde o livro digital foi adquirido.</div>
-<div class="box aviso"><p class="box-title">Aviso</p><p>Este livro tem finalidade educativa e não substitui a avaliação de um médico otorrinolaringologista ou de um fonoaudiólogo. Os exercícios são indicados para vozes saudáveis. Rouquidão persistente, dor, falhas na voz ou cansaço vocal frequente exigem avaliação profissional.</p></div>
+<div class="box aviso"><p class="box-title">Aviso</p><p>Este livro tem finalidade educativa e não substitui a avaliação de um médico otorrinolaringologista ou de um fonoaudiólogo. Os exercícios são indicados para vozes saudáveis. Rouquidão persistente, dor, falhas na voz ou cansaço vocal frequente exigem avaliação profissional. As obras citadas são apresentadas em resumo e paráfrase, com crédito aos seus autores, e não substituem a leitura dos originais.</p></div>
 </section>'''
 SOBRE_AUTORA='''<div class="pg cream autora" id="sobre-autora"><div class="ph"><img src="assets/bw-autora.jpg"></div><div class="tx">
 <div class="kick">A autora</div><h1>Dra. Brízia<br>Lacerda</h1><div class="rule"></div>
@@ -105,6 +106,7 @@ CRED=f'''<div class="cred"><p><strong>{TITLE}</strong><br>{SUB}</p>
 <p>Projeto gráfico, capa e ilustrações originais. Fotografias: acervo da autora.</p>
 <p>Esta obra tem finalidade educativa e não substitui a avaliação de médico otorrinolaringologista ou de fonoaudiólogo.</p></div>'''
 REFS=open("refs.html",encoding="utf-8").read()
+ESTANTE=open("estante.html",encoding="utf-8").read() if os.path.exists("estante.html") else ""
 html=f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>{TITLE}</title><style>{fonts_css()}</style><link rel="stylesheet" href="orat.css"></head><body>
 <div class="pg cream cover"><img src="cover.png"></div>
 <div class="pg cream half"><div><p>{TITLE}</p><small>DRA. BRÍZIA LACERDA</small></div></div>
@@ -116,6 +118,7 @@ html=f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>{T
 {SOBRE_LIVRO}
 {SOBRE_AUTORA}
 {body}
+{ESTANTE}
 {REFS}
 <div class="pg cream cover"><img src="back.png"></div>
 </body></html>'''

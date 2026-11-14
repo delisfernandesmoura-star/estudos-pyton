@@ -2,7 +2,7 @@
 
 - **Título de trabalho:** Voz, Palco e Presença. **Subtítulo:** Oratória com ciência, da preparação vocal à grande apresentação. A cliente não escolheu título ("sem preferência"); confirmar com ela.
 - **Autora:** Dra. Brízia Lacerda.
-- **Formato:** PDF premium de 17 × 24 cm, com 126 páginas (o pedido era "umas 120").
+- **Formato:** PDF premium de 17 × 24 cm, com 143 páginas (o pedido era "umas 120"; o apêndice de curadoria acrescentou cerca de 17).
 
 ## Pedido da cliente
 - Pegar o principal dos livros de oratória mais vendidos nos EUA, sem contrariar os princípios da fonoaudiologia e a literatura fonoaudiológica brasileira. Somar a isso o conteúdo do livro principal ("Voz, Canto e Ciência").
@@ -34,8 +34,15 @@
   15. Cada palco, uma voz
   16. Plano de 8 semanas
 
+## Conceito de curadoria (pedido da cliente)
+O livro é um guia de curadoria: a autora estudou os principais livros de oratória e a literatura fonoaudiológica, "mastigou" o conteúdo e entrega o essencial, sempre citando as fontes.
+- **"Sobre este livro"** apresenta a curadoria.
+- **17 quadros "Da estante"** nos capítulos: autor · obra, técnica central e "O filtro da fonoaudióloga" (o que adotar, adaptar ou evitar).
+- **Apêndice "A estante da oratória"** (estante.html): 17 livros, cada um com a ideia central, o que levar para o palco e o olhar da fonoaudiologia.
+- **Críticas respeitosas:** a ideia de "cérebro reptiliano" (Klaff) é tratada como simplificação; promessas de transformação rápida (Love) foram filtradas.
+
 ## Base e referências
-- **Livros americanos:** Anderson (TED), Gallo (Talk Like TED), Heath & Heath (Made to Stick), Abrahams, Carnegie, Berkun, Fisher, Hasan e Roger Love. As ideias foram parafraseadas e creditadas.
+- **Livros americanos:** Anderson (TED), Gallo (Talk Like TED), Heath & Heath (Made to Stick), Abrahams, Carnegie, Berkun, Fisher, Hasan, Klaff, Carnegie & Esenwein e Roger Love. As ideias foram parafraseadas e creditadas.
 - **Literatura brasileira:**
   - Behlau (2001);
   - Behlau & Pontes (Higiene vocal);

@@ -205,3 +205,20 @@ p.destaque{margin:7mm 0 8mm;padding:0 0 0 7mm;border-left:1px solid var(--ouro);
 .aviso-aud b{display:block;font-family:Bodoni;font-weight:500;font-size:12pt;margin-bottom:1.4mm}
 
 .quote .q{hyphens:none;-webkit-hyphens:none}
+/* curadoria */
+.box.estante{background:var(--branco);border-left:3px solid var(--preto);padding-left:6mm}
+.box.estante .box-title{color:var(--preto);letter-spacing:.2em}
+.box.estante .box-title::before{content:"Da estante · ";color:var(--ouro)}
+.box.estante .box-title em{font-family:Bodoni;font-style:italic;font-size:10.5pt;letter-spacing:0;text-transform:none}
+.box.estante .filtro{margin-top:2.6mm;padding-top:2.4mm;border-top:.6px solid #e2dace;font-size:8.8pt}
+.box.estante .filtro strong{font-family:Inter;font-weight:600;color:var(--ouro);letter-spacing:.04em}
+.estante-ap{break-before:page}
+.estante-ap h1{font-family:Bodoni;font-weight:400;font-size:34pt;line-height:1.02;margin:0 0 4mm}
+.estante-ap .kick{font-size:6.8pt;letter-spacing:.38em;text-transform:uppercase;color:var(--ouro);font-weight:600;margin-bottom:5mm}
+.estante-ap .rule{width:16mm;height:1px;background:var(--ouro);margin:0 0 8mm}
+.estante-ap h3{margin-top:9mm}
+.livro{padding:4.6mm 0 3.6mm;border-top:.6px solid #d6cdbd;break-inside:avoid;font-size:9pt;line-height:1.55}
+.livro p{margin:0 0 .5em}
+.livro .lv-t{font-family:Bodoni;font-size:15pt;line-height:1.15;margin:0 0 .6mm}
+.livro .lv-a{font-size:6.8pt;letter-spacing:.3em;text-transform:uppercase;color:var(--ouro);font-weight:600;margin-bottom:2.6mm}
+.livro strong{font-weight:600}

@@ -15,6 +15,7 @@ for sid,lab,tit,chs in toc:
     c=find(sid,lambda t,L=norm(lab),T=norm(tit): (L+T) in t and len(t)<900,c)
     for cid,num,t in chs:
         c=find(cid,lambda tx,N=int(num),T=norm(t): tx.startswith(f"{N:02d}capítulo{N}") and T[:20] in tx[:200],c)
+c=find("estante",lambda t:"aestantedaoratória" in t[:80],c)
 c=find("referencias",lambda t:"referências" in t[:30],c)
 
 json.dump(P,open("pages.json","w")); print(P)
