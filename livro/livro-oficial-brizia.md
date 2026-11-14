@@ -61,6 +61,12 @@
 - **Lombada:** preta, com "Voz, Canto e Ciência" em Bodoni dourado, "DRA. BRÍZIA LACERDA" em creme e um "V" dourado embaixo.
 - **Mockups:** em `livro/mockups/` (capa, lombada e contracapa preta) e artes planas da contracapa e da lombada.
 
+## Carrossel de lançamento
+- **Arquivos:** em `livro/carrossel-lancamento/`, com 10 slides de 1080 × 1350, um PDF e a legenda.
+- **Visual:** a mesma identidade do livro (creme, preto, dourado, Bodoni e Inter), com fotos da autora em preto e branco, páginas reais do livro e mockups.
+- **Chamada final:** "Comente VOZ" para receber no direct o link da pré-venda (primeira edição em capa dura e versão digital).
+- **Cuidado com o texto:** sem preço, desconto, depoimento ou número que não tenha sido confirmado.
+
 ## Situação atual (14/11/2026)
 - **Versão para impressão e revisão da autora:** `voz-canto-e-ciencia_PDF-premium.pdf`, 156 páginas.
 - **EPUBs:** são da versão anterior. Ainda não têm as referências completadas nem a remoção do ISBN, e devem ser gerados de novo na versão final.
