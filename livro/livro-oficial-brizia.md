@@ -67,6 +67,12 @@
 - **Chamada final:** "Comente VOZ" para receber no direct o link da pré-venda (primeira edição em capa dura e versão digital).
 - **Cuidado com o texto:** sem preço, desconto, depoimento ou número que não tenha sido confirmado.
 
+## Edição em inglês
+- **Título:** *Voice, Singing and Science*, com "Dr. Brízia Lacerda" na capa, que tem a palavra gigante VOICE.
+- **Arquivos:** PDF em `livro/english/` (155 páginas) e fontes em `livro/fonte/english/`.
+- **Adaptações:** tradução livre, com notas musicais no padrão internacional (Dó central = C4) e trava-línguas trocados por equivalentes em inglês.
+- **Correções históricas feitas só no inglês:** reggae (origem no ska e no rocksteady) e *Thriller* (sem a cifra de 100 milhões). Vale corrigir também no português.
+
 ## Situação atual (14/11/2026)
 - **Versão para impressão e revisão da autora:** `voz-canto-e-ciencia_PDF-premium.pdf`, 156 páginas.
 - **EPUBs:** são da versão anterior. Ainda não têm as referências completadas nem a remoção do ISBN, e devem ser gerados de novo na versão final.
