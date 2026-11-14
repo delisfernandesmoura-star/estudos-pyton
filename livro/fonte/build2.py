@@ -160,10 +160,8 @@ SOBRE_AUTORA=f'''<div class="pg cream autora" id="sobre-autora"><div class="ph">
 
 CREDITOS=f'''<div class="cred">
 <p><strong>{TITLE}</strong><br>{SUB}</p>
-<p>Autora: {AUTHOR}<br>Edição digital · 2026</p>
+<p>Autora: {AUTHOR}<br>Versão para impressão e revisão da autora · 2026</p>
 <p>© 2026 {AUTHOR}. Todos os direitos reservados. Nenhuma parte desta obra pode ser reproduzida ou transmitida, por qualquer meio, sem autorização prévia e por escrito da autora, conforme a Lei nº 9.610/1998.</p>
-<p>ISBN (e-book): [a ser atribuído pela Agência Brasileira do ISBN]</p>
-<div class="ph">[Ficha catalográfica (CIP): a ser emitida pela Biblioteca Nacional]</div>
 <p>Projeto gráfico, capa e ilustrações originais. Fotografias: acervo da autora.</p>
 <p>Este livro tem finalidade educativa e não substitui a avaliação de profissionais de saúde.</p>
 </div>'''
@@ -172,7 +170,7 @@ AUDIOS='''<div class="pg black audiopg" id="audios"><div class="k">Material comp
 <p>Todos os exercícios deste livro têm áudio de apoio, gravado para que você pratique com a referência certa de som, ritmo e afinação. Aponte a câmera do celular para o QR code ou acesse o endereço abaixo para baixar o material completo.</p>
 <div class="qr"><div class="box">[QR CODE]</div><div class="url">[endereço do site]<small>ACESSO EXCLUSIVO PARA LEITORES</small></div></div></div>'''
 
-refs=REFS.replace('<section class="refs" id="referencias">','<section class="refs" id="referencias"><div class="kick">Fontes</div>').replace("<h1>Referências</h1>","<h1>Referências</h1><div class=\"rule\"></div>")
+refs=open('refs_final.html',encoding='utf-8').read() if True else REFS.replace('<section class="refs" id="referencias">','<section class="refs" id="referencias"><div class="kick">Fontes</div>').replace("<h1>Referências</h1>","<h1>Referências</h1><div class=\"rule\"></div>")
 
 html=f'''<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>{TITLE}</title><style>{fonts_css()}</style><link rel="stylesheet" href="book2.css"></head><body>
 <div class="pg cream cover"><img src="cover.png"></div>
