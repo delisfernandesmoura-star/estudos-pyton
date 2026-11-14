@@ -53,6 +53,14 @@
   - referenciar também o que tiver origem identificável (por exemplo, CVT/Sadolin, Estill);
   - quando não der para confirmar os dados, deixar o contexto de onde veio.
 
+## Capa dura (versão impressa de luxo)
+- **Contracapa:** preta, preferência da cliente.
+  - textos em creme e dourado com efeito de folha dourada;
+  - frase "Conhecimento que ganha voz.", lista das 4 partes e foto pequena da autora em arco;
+  - sem código de barras ou ISBN por enquanto.
+- **Lombada:** preta, com "Voz, Canto e Ciência" em Bodoni dourado, "DRA. BRÍZIA LACERDA" em creme e um "V" dourado embaixo.
+- **Mockups:** em `livro/mockups/` (capa, lombada e contracapa preta) e artes planas da contracapa e da lombada.
+
 ## Situação atual (14/11/2026)
 - **Versão para impressão e revisão da autora:** `voz-canto-e-ciencia_PDF-premium.pdf`, 156 páginas.
 - **EPUBs:** são da versão anterior. Ainda não têm as referências completadas nem a remoção do ISBN, e devem ser gerados de novo na versão final.

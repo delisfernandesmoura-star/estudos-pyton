@@ -1,0 +1,40 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+html,body{margin:0;height:100%}
+body{width:1800px;height:1350px;overflow:hidden;background:radial-gradient(ellipse at 50% 38%,#e9e2d6 0%,#d6cdbf 45%,#b8ad9c 100%);position:relative}
+.floor{position:absolute;left:0;right:0;bottom:0;height:330px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(70,55,35,.10))}
+.scene{position:absolute;left:50%;top:47%;width:0;height:0;perspective:2600px}
+.book{position:absolute;width:var(--W);height:var(--H);transform-style:preserve-3d;transform:translate(-50%,-50%) scale(var(--sc)) rotateX(var(--rx)) rotateY(var(--ry));--W:600px;--H:847px;--T:58px}
+.f{position:absolute;backface-visibility:hidden;left:0;top:0}
+.front{width:var(--W);height:var(--H);transform:translateZ(calc(var(--T)/2));border-radius:2px 6px 6px 2px;overflow:hidden}
+.front img,.back img{width:100%;height:100%;display:block}
+.back{width:var(--W);height:var(--H);transform:rotateY(180deg) translateZ(calc(var(--T)/2));border-radius:6px 2px 2px 6px;overflow:hidden}
+.spine{width:var(--T);height:var(--H);left:calc(var(--W)/2 - var(--T)/2);transform:rotateY(-90deg) translateZ(calc(var(--W)/2));overflow:hidden;border-radius:6px}
+.spine img{width:100%;height:100%;display:block}
+.pages{width:calc(var(--T) - 8px);height:calc(var(--H) - 10px);top:5px;left:calc(var(--W)/2 - var(--T)/2 + 4px);transform:rotateY(90deg) translateZ(calc(var(--W)/2 - 5px));
+ background:repeating-linear-gradient(90deg,#f3eee4 0 1.2px,#ddd5c6 1.2px 2px);box-shadow:inset 0 0 6px rgba(0,0,0,.25)}
+.top{width:var(--W);height:calc(var(--T) - 8px);top:calc(var(--H)/2 - var(--T)/2 + 4px);transform:rotateX(90deg) translateZ(calc(var(--H)/2 - 5px));
+ background:repeating-linear-gradient(0deg,#f3eee4 0 1.2px,#ddd5c6 1.2px 2px)}
+.bottom{width:var(--W);height:calc(var(--T) - 8px);top:calc(var(--H)/2 - var(--T)/2 + 4px);transform:rotateX(-90deg) translateZ(calc(var(--H)/2 - 5px));background:#cfc6b6}
+/* lighting */
+.front::after{content:"";position:absolute;inset:0;background:linear-gradient(105deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 30%,rgba(0,0,0,0) 70%,rgba(0,0,0,.10) 100%)}
+.front::before{content:"";position:absolute;top:0;bottom:0;left:16px;width:5px;background:linear-gradient(90deg,rgba(0,0,0,.20),rgba(255,255,255,.18),rgba(0,0,0,.05));z-index:2}
+.back::after{content:"";position:absolute;inset:0;background:linear-gradient(255deg,rgba(255,255,255,.10) 0%,rgba(255,255,255,0) 35%,rgba(0,0,0,.18) 100%)}
+.back::before{content:"";position:absolute;top:0;bottom:0;right:16px;width:5px;background:linear-gradient(270deg,rgba(0,0,0,.4),rgba(255,255,255,.08),rgba(0,0,0,.1));z-index:2}
+.spine::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.45) 0%,rgba(255,255,255,.10) 35%,rgba(255,255,255,.04) 55%,rgba(0,0,0,.5) 100%)}
+.contact{position:absolute;left:50%;top:50%;width:calc(var(--sw)*.62);height:26px;transform:translate(-50%,calc(var(--H2) + 18px));background:radial-gradient(ellipse at center,rgba(25,18,10,.7) 0%,rgba(25,18,10,0) 70%);filter:blur(5px)}
+.shadow{position:absolute;left:50%;top:50%;width:var(--sw);height:120px;transform:translate(-50%,calc(var(--H2) - 20px));background:radial-gradient(ellipse at center,rgba(40,28,15,.55) 0%,rgba(40,28,15,.25) 40%,rgba(0,0,0,0) 70%);filter:blur(14px)}
+</style></head><body><div class="floor"></div>
+<div class="scene"><div class="shadow" id="sh"></div><div class="contact" id="ct"></div>
+<div class="book" id="bk">
+ <div class="f back"><img src="back_black.png"></div>
+ <div class="f spine"><img src="spine.png"></div>
+ <div class="f pages"></div><div class="f top"></div><div class="f bottom"></div>
+ <div class="f front"><img src="cover.png"></div>
+</div></div>
+<script>
+const q=new URLSearchParams(location.search);
+const bk=document.getElementById('bk'), sh=document.getElementById('sh');
+bk.style.setProperty('--ry',(q.get('ry')||'-22')+'deg'); bk.style.setProperty('--rx',(q.get('rx')||'4')+'deg'); bk.style.setProperty('--sc',q.get('sc')||'1');
+for(const e of [sh,document.getElementById('ct')]){e.style.setProperty('--sw',(q.get('sw')||'760')+'px'); e.style.setProperty('--H2',(q.get('sy')||'400')+'px');}
+if(q.get('bg')==='dark'){document.body.style.background='radial-gradient(ellipse at 50% 38%,#3a3631 0%,#24211e 50%,#141210 100%)';}
+</script></body></html>
