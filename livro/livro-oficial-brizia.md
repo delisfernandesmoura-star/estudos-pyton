@@ -73,6 +73,15 @@
 - **Adaptações:** tradução livre, com notas musicais no padrão internacional (Dó central = C4) e trava-línguas trocados por equivalentes em inglês.
 - **Correções históricas feitas só no inglês:** reggae (origem no ska e no rocksteady) e *Thriller* (sem a cifra de 100 milhões). Também corrigidas no português.
 
+## Edição em espanhol
+- **Título:** *Voz, Canto y Ciencia*, em espanhol neutro (Espanha, México e público hispânico dos EUA).
+- **Capa:** mantém a palavra VOZ.
+- **Arquivos:** PDF em `livro/espanol/` (158 páginas) e fontes em `livro/fonte/espanol/`.
+- **Adaptações:**
+  - trava-línguas em espanhol;
+  - "fonoaudiólogo (logopeda)";
+  - notas musicais na notação original, com o Dó central como Do3.
+
 ## Situação atual (14/11/2026)
 - **Versão para impressão e revisão da autora:** `voz-canto-e-ciencia_PDF-premium.pdf`, 156 páginas.
 - **EPUBs:** são da versão anterior. Ainda não têm as referências completadas nem a remoção do ISBN, e devem ser gerados de novo na versão final.
